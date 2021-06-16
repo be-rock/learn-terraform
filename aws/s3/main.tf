@@ -14,7 +14,6 @@ provider "aws" {
   skip_credentials_validation = true
 
   endpoints {
-    dynamodb = "http://localhost:4566"
     s3       = "http://localhost:4566"
   }
 }
