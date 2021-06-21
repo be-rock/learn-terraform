@@ -2,6 +2,7 @@
 
 provider "aws" {
   region = var.region
+  profile = "admin"
 }
 
 data "aws_availability_zones" "available" {}
