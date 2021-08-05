@@ -18,9 +18,28 @@ provider "aws" {
   }
 }
 
-resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket"
+resource "aws_s3_bucket" "b1" {
+  bucket = "versioned-bucket"
   acl    = "private"
+
+  versioning {
+    enabled = true
+  }
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+
+resource "aws_s3_bucket" "b2" {
+  bucket = "nonversioned-bucket"
+  acl    = "private"
+
+  versioning {
+    enabled = false
+  }
+
   tags = {
     Name        = "My bucket"
     Environment = "Dev"
