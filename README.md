@@ -61,5 +61,5 @@ resource "aws_s3_bucket" "b" {
 
 ```shell
 # example with s3 to list buckets
-awslocal s3 ls /
+awslocal s3 ls
 ```
