@@ -8,8 +8,8 @@
 # }
 
 module "create-bucket" {
-    source = "../modules"
+  source = "../modules"
 
-    environment = var.environment
-    bucket_name = var.bucket_name
+  environment = var.environment
+  bucket_name = var.bucket_name
 }
